@@ -218,12 +218,15 @@ document.querySelectorAll('.delivery-btn').forEach((btn, idx) => {
 updateCartCount();
 
 // Abrir/fechar sidebar
+const floatingCartBtn = document.getElementById('floating-cart-btn');
 document.getElementById('cart-btn').addEventListener('click', function() {
   document.getElementById('cart-sidebar').classList.add('open');
+  if (floatingCartBtn) floatingCartBtn.style.display = 'none';
   updateCartSidebar();
 });
 document.getElementById('close-cart').addEventListener('click', function() {
   document.getElementById('cart-sidebar').classList.remove('open');
+  if (floatingCartBtn) floatingCartBtn.style.display = 'flex';
 });
 
 // Remover item do carrinho
@@ -251,6 +254,7 @@ window.addEventListener('DOMContentLoaded', showFloatingCartBtn);
 // Abrir carrinho ao clicar no botão flutuante
 document.getElementById('floating-cart-btn').addEventListener('click', function() {
   document.getElementById('cart-sidebar').classList.add('open');
+  if (floatingCartBtn) floatingCartBtn.style.display = 'none';
   updateCartSidebar();
 });
 
