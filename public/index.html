@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pizzaria Sabor & Arte</title>
+  <link rel="stylesheet" href="../src/styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header>
+    <div class="header-content">
+      <img src="/assets/Logo-pizzaria.png" alt="Logo Pizzaria" class="header-logo-img">
+      <div>
+        <h1>Pizzaria Sabor & Arte</h1>
+        <p>O melhor sabor da cidade!</p>
+      </div>
+      <button id="cart-btn" class="cart-btn">
+        🛒 Carrinho <span id="cart-count">0</span>
+      </button>
+    </div>
+  </header>
+  <main>
+    <section id="menu">
+      <h2>Cardápio Digital</h2>
+      <div class="menu-cards">
+        <div class="card">
+          <img src="/assets/queijo.jpg" alt="Quatro Queijos">
+          <div class="card-info">
+            <h3>Quatro Queijos</h3>
+            <p>Mussarela, provolone, parmesão e gorgonzola, molho de tomate e orégano.</p>
+            <span class="price">R$ 49,90</span>
+          </div>
+          <button class="delivery-btn">Receba em casa</button>
+          <button class="reserve-btn">Reservar</button>
+          <button class="pedir-agora-btn">Pedir agora</button>
+        </div>
+        <div class="card">
+          <img src="/assets/barbecue.png" alt="Barbecue">
+          <div class="card-info">
+            <h3>Barbecue</h3>
+            <p>Molho barbecue, mussarela, frango, cebola e bacon crocante.</p>
+            <span class="price">R$ 47,90</span>
+          </div>
+            <button class="delivery-btn">Receba em casa</button>
+            <button class="reserve-btn">Reservar</button>
+            <button class="pedir-agora-btn">Pedir agora</button>
+        </div>
+        <div class="card">
+          <img src="/assets/calabresa.png" alt="Calabresa">
+          <div class="card-info">
+            <h3>Calabresa</h3>
+            <p>Molho de tomate, mussarela, calabresa fatiada e cebola.</p>
+            <span class="price">R$ 42,90</span>
+          </div>
+          <button class="delivery-btn">Receba em casa</button>
+            <button class="reserve-btn">Reservar</button>
+            <button class="pedir-agora-btn">Pedir agora</button>
+        </div>
+        <div class="card">
+          <img src="/assets/frango-cream-cheese.png" alt="Frango com Cream Cheese">
+          <div class="card-info">
+            <h3>Frango com Cream Cheese</h3>
+            <p>Molho de tomate, frango desfiado, cream cheese e milho.</p>
+            <span class="price">R$ 45,90</span>
+          </div>
+          <button class="delivery-btn">Receba em casa</button>
+            <button class="reserve-btn">Reservar</button>
+            <button class="pedir-agora-btn">Pedir agora</button>
+        </div>
+        <div class="card">
+          <img src="/assets/mexicana.png" alt="Mexicana">
+          <div class="card-info">
+            <h3>Mexicana</h3>
+            <p>Molho de tomate, mussarela, carne moída, pimentão, cebola e pimenta jalapeño.</p>
+            <span class="price">R$ 48,90</span>
+          </div>
+          <button class="delivery-btn">Receba em casa</button>
+            <button class="reserve-btn">Reservar</button>
+            <button class="pedir-agora-btn">Pedir agora</button>
+        </div>
+        <div class="card">
+          <img src="/assets/mussarela.png" alt="Mussarela">
+          <div class="card-info">
+            <h3>Mussarela</h3>
+            <p>Molho de tomate, mussarela e orégano.</p>
+            <span class="price">R$ 39,90</span>
+          </div>
+          <button class="delivery-btn">Receba em casa</button>
+            <button class="reserve-btn">Reservar</button>
+            <button class="pedir-agora-btn">Pedir agora</button>
+        </div>
+        <div class="card">
+          <img src="/assets/pepperoni.png" alt="Pepperoni">
+          <div class="card-info">
+            <h3>Pepperoni</h3>
+            <p>Molho de tomate, mussarela e pepperoni fatiado.</p>
+            <span class="price">R$ 46,90</span>
+          </div>
+          <button class="delivery-btn">Receba em casa</button>
+            <button class="reserve-btn">Reservar</button>
+            <button class="pedir-agora-btn">Pedir agora</button>
+        </div>
+        <div class="card">
+          <img src="/assets/portuguesa.png" alt="Portuguesa">
+          <div class="card-info">
+            <h3>Portuguesa</h3>
+            <p>Molho de tomate, mussarela, presunto, ovos, cebola e azeitonas.</p>
+            <span class="price">R$ 44,90</span>
+          </div>
+          <button class="delivery-btn">Receba em casa</button>
+            <button class="reserve-btn">Reservar</button>
+            <button class="pedir-agora-btn">Pedir agora</button>
+        </div>
+        <div class="card">
+          <img src="/assets/queijo.jpg" alt="Quatro Queijos">
+          <div class="card-info">
+            <h3>Quatro Queijos</h3>
+            <p>Mussarela, provolone, gorgonzola e parmesão.</p>
+            <span class="price">R$ 45,90</span>
+          </div>
+          <button class="delivery-btn">Receba em casa</button>
+            <button class="reserve-btn">Reservar</button>
+            <button class="pedir-agora-btn">Pedir agora</button>
+        </div>
+      </div>
+    </section>
+    <section id="reserva">
+      <h2>Reserve sua mesa</h2>
+      <form class="reserva-form">
+  <label for="nome">Nome:</label>
+  <input type="text" id="nome" name="nome" required placeholder="Seu nome">
+  <label for="whatsapp">WhatsApp:</label>
+  <input type="tel" id="whatsapp" name="whatsapp" required placeholder="(99) 99999-9999" pattern="\(\d{2}\) \d{5}-\d{4}">
+  <label for="gmail">Gmail:</label>
+  <input type="email" id="gmail" name="gmail" required placeholder="seuemail@gmail.com">
+        <label for="data">Data:</label>
+        <input type="date" id="data" name="data" required>
+        <label for="hora">Hora:</label>
+        <input type="time" id="hora" name="hora" required>
+        <button type="submit" class="enviar-reserva">Enviar</button>
+      </form>
+    </section>
+  </main>
+  <section class="localizacao">
+    <h2 class="localizacao-titulo">Estamos localizados em</h2>
+    <p class="localizacao-endereco">Av. das Pizzas, 1234 - Centro, Saborópolis/SP</p>
+    <div class="localizacao-mapa">
+      <iframe src="https://www.google.com/maps?q=-23.55052,-46.633308&z=15&output=embed" width="100%" height="280" style="border:0; border-radius:14px; box-shadow:0 2px 8px rgba(211,47,47,0.07);" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
+  </section>
+
+  <!-- Aba do carrinho -->
+  <aside id="cart-sidebar" class="cart-sidebar">
+    <div class="cart-sidebar-header">
+      <h3>Seu Carrinho</h3>
+      <button id="close-cart" class="close-cart">&times;</button>
+    </div>
+    <div id="cart-items" class="cart-items"></div>
+    <div class="cart-sidebar-footer">
+      <span id="cart-total" class="cart-total">Total: R$ 0,00</span>
+      <button id="checkout-btn" class="checkout-btn">Finalizar compra</button>
+    </div>
+  </aside>
+  <footer>
+    <div class="footer-content">
+      <p><strong>Pizzaria Sabor & Arte</strong></p>
+      <p>Endereço: Av. das Pizzas, 123 - Centro, Cidade/UF</p>
+      <p>WhatsApp: (99) 99999-9999 | Email: contato@saborarte.com</p>
+      <p>Horário: Ter a Dom 18h às 23h</p>
+      <p>&copy; 2025 Pizzaria Sabor & Arte. Todos os direitos reservados.</p>
+    </div>
+  </footer>
+<script>
+// Carrinho com sidebar
+let cart = [];
+function updateCartCount() {
+  document.getElementById('cart-count').textContent = cart.length;
+}
+function updateCartSidebar() {
+  const cartItems = document.getElementById('cart-items');
+  cartItems.innerHTML = '';
+  let total = 0;
+  cart.forEach((pizza, idx) => {
+    const item = document.createElement('div');
+    item.className = 'cart-item';
+    item.innerHTML = `
+      <img src="${pizza.imagem}" alt="${pizza.nome}" class="cart-item-img">
+      <div class="cart-item-info">
+        <span class="cart-item-nome">${pizza.nome}</span>
+        <span class="cart-item-preco">${pizza.preco}</span>
+      </div>
+      <button class="remove-cart-item" data-idx="${idx}">&times;</button>
+    `;
+    cartItems.appendChild(item);
+    total += parseFloat(pizza.preco.replace('R$', '').replace(',', '.'));
+  });
+  document.getElementById('cart-total').textContent = `Total: R$ ${total.toFixed(2).replace('.', ',')}`;
+}
+document.querySelectorAll('.delivery-btn').forEach((btn, idx) => {
+  btn.addEventListener('click', function(e) {
+    e.stopPropagation();
+    const card = btn.closest('.card');
+    const pizza = {
+      nome: card.querySelector('h3').textContent,
+      preco: card.querySelector('.price').textContent,
+      imagem: card.querySelector('img').getAttribute('src')
+    };
+    cart.push(pizza);
+    updateCartCount();
+    updateCartSidebar();
+    btn.textContent = 'Adicionada!';
+    setTimeout(() => btn.textContent = 'Receba em casa', 1200);
+    document.getElementById('cart-sidebar').classList.add('open');
+    updateCartSidebar();
+  });
+});
+updateCartCount();
+
+// Abrir/fechar sidebar
+document.getElementById('cart-btn').addEventListener('click', function() {
+  document.getElementById('cart-sidebar').classList.add('open');
+  updateCartSidebar();
+});
+document.getElementById('close-cart').addEventListener('click', function() {
+  document.getElementById('cart-sidebar').classList.remove('open');
+});
+
+// Remover item do carrinho
+document.getElementById('cart-items').addEventListener('click', function(e) {
+  if (e.target.classList.contains('remove-cart-item')) {
+    const idx = parseInt(e.target.getAttribute('data-idx'));
+    cart.splice(idx, 1);
+    updateCartCount();
+    updateCartSidebar();
+  }
+});
+</script>
+  <button class="floating-cart-btn" id="floating-cart-btn" style="display:none;" aria-label="Abrir carrinho">🛒</button>
+
+<script>
+// Exibe o botão flutuante de carrinho em todas as telas
+function showFloatingCartBtn() {
+  const btn = document.getElementById('floating-cart-btn');
+  btn.style.display = 'flex';
+}
+window.addEventListener('resize', showFloatingCartBtn);
+window.addEventListener('DOMContentLoaded', showFloatingCartBtn);
+
+
+// Abrir carrinho ao clicar no botão flutuante
+document.getElementById('floating-cart-btn').addEventListener('click', function() {
+  document.getElementById('cart-sidebar').classList.add('open');
+  updateCartSidebar();
+});
+
+// Adicionar pizza ao carrinho ao clicar em "Pedir agora" (mobile)
+document.querySelectorAll('.pedir-agora-btn').forEach((btn) => {
+  btn.addEventListener('click', function(e) {
+    e.stopPropagation();
+    const card = btn.closest('.card');
+    const pizza = {
+      nome: card.querySelector('h3').textContent,
+      preco: card.querySelector('.price').textContent,
+      imagem: card.querySelector('img').getAttribute('src')
+    };
+    cart.push(pizza);
+    updateCartCount();
+    updateCartSidebar();
+    btn.textContent = 'Adicionada!';
+    setTimeout(() => btn.textContent = 'Pedir agora', 1200);
+    document.getElementById('cart-sidebar').classList.add('open');
+    updateCartSidebar();
+  });
+});
+</script>
+</body>
+</html>

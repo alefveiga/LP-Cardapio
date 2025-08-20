@@ -1,0 +1,15 @@
+# Node
+node_modules/
+# VSCode
+.vscode/
+# Build
+/dist/
+/build/
+# Sass
+*.css.map
+*.scssc
+# OS
+.DS_Store
+Thumbs.db
+# Env
+.env
