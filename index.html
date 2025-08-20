@@ -215,6 +215,17 @@ document.querySelectorAll('.delivery-btn').forEach((btn, idx) => {
     updateCartSidebar();
   });
 });
+
+// Scroll suave para a seção de reserva ao clicar em qualquer botão Reservar
+document.querySelectorAll('.reserve-btn').forEach((btn) => {
+  btn.addEventListener('click', function(e) {
+    e.preventDefault();
+    const reservaSection = document.getElementById('reserva');
+    if (reservaSection) {
+      reservaSection.scrollIntoView({ behavior: 'smooth' });
+    }
+  });
+});
 updateCartCount();
 
 // Abrir/fechar sidebar
