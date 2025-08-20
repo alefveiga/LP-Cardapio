@@ -1,0 +1,15 @@
+// Mixins globais do projeto
+@mixin btn-base {
+  font-weight: 700;
+  border: none;
+  border-radius: $radius-btn;
+  box-shadow: $shadow-btn;
+  cursor: pointer;
+  transition: background $transition;
+}
+@mixin btn-hover($bg, $color) {
+  &:hover {
+    background: $bg;
+    color: $color;
+  }
+}

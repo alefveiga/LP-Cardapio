@@ -1,0 +1,122 @@
+@import 'variables';
+
+.card {
+  background: #fff;
+  border-radius: $radius-card;
+  box-shadow: $shadow-card;
+  padding: 0.5rem 0.5rem 1.2rem 0.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.18s, box-shadow 0.18s;
+  cursor: pointer;
+  border: 1.5px solid #f3e5ab;
+
+  &:hover {
+    transform: translateY(-6px) scale(1.03);
+    box-shadow: $shadow-card-hover;
+    border-color: $laranja;
+    &::after {
+      opacity: 1;
+    }
+    .card-info h3, .card-info p, .price {
+      color: #fff;
+    }
+    img {
+      filter: brightness(0.7) grayscale(0.2);
+    }
+    .delivery-btn, .reserve-btn {
+      display: block;
+    }
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: $vermelho;
+    opacity: 0;
+    transition: opacity 0.2s;
+    z-index: 2;
+  }
+
+  .card-info, .reserve-btn, .delivery-btn, img {
+    position: relative;
+    z-index: 3;
+    transition: color 0.2s;
+  }
+
+  img {
+    width: 100%;
+    height: 160px;
+    object-fit: cover;
+    border-radius: 12px;
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.10);
+    background: $cinza-claro;
+    display: block;
+  }
+
+  .card-info {
+    text-align: center;
+
+    h3 {
+      font-family: $fonte-texto;
+      font-size: 1.25rem;
+      color: $vermelho;
+      margin-bottom: 0.3rem;
+      font-weight: 700;
+    }
+    p {
+      font-size: 1rem;
+      color: $cinza-escuro;
+      margin-bottom: 0.5rem;
+    }
+    .price {
+      display: inline-block;
+      margin-top: 0.5rem;
+      font-weight: bold;
+      color: $laranja;
+      font-size: 1.1rem;
+      background: #fff3e0;
+      padding: 0.3rem 1.1rem;
+      border-radius: 20px;
+      box-shadow: 0 1px 4px rgba(255, 152, 0, 0.08);
+    }
+  }
+
+  .delivery-btn, .reserve-btn {
+    display: none;
+    position: absolute;
+    left: 50%;
+    width: 70%;
+    min-width: 120px;
+    max-width: 220px;
+    padding: 0.7rem 0.5rem;
+    font-size: 1rem;
+    font-weight: 700;
+    border-radius: 20px;
+    background: #fff;
+    color: $vermelho;
+    border: none;
+    box-shadow: 0 2px 8px rgba(211,47,47,0.10);
+    cursor: pointer;
+    transition: background 0.2s, opacity 0.2s;
+    opacity: 0.98;
+    z-index: 3;
+  }
+  .delivery-btn {
+    top: 38%;
+    transform: translate(-50%, -50%);
+  }
+  .reserve-btn {
+    top: 62%;
+    transform: translate(-50%, -50%);
+  }
+}

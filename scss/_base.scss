@@ -1,0 +1,9 @@
+@import 'variables';
+@import 'mixins';
+
+body {
+  font-family: $fonte-texto;
+  background: $cinza-claro;
+  margin: 0;
+  padding: 0;
+}

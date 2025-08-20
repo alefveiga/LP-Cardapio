@@ -1,0 +1,44 @@
+@import 'variables';
+
+.localizacao {
+  text-align: center;
+  margin: 2.5rem 0 2.2rem 0;
+  background: linear-gradient(120deg, $cor-endereco-bg 60%, #ffe0e0 100%);
+  border-radius: 24px;
+  box-shadow: 0 4px 32px rgba(211,47,47,0.09);
+  padding: 2.2rem 1.2rem 2.5rem 1.2rem;
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+  position: relative;
+}
+.localizacao-titulo {
+  font-family: $fonte-titulo;
+  font-size: 2.2rem;
+  color: $vermelho;
+  margin-bottom: 1.1rem;
+  letter-spacing: 2px;
+  text-shadow: 1px 2px 12px #ff980055, 0 1px 0 #fff;
+  font-weight: 700;
+}
+.localizacao-endereco {
+  font-size: 1.15rem;
+  color: #333;
+  background: $cor-endereco-bg;
+  display: inline-block;
+  padding: 0.8rem 1.7rem;
+  border-radius: 16px;
+  box-shadow: $shadow-endereco;
+  margin-bottom: 1.5rem;
+  font-weight: 500;
+  border: 1.5px solid $cor-endereco-borda;
+}
+.localizacao-mapa {
+  width: 100%;
+  max-width: 520px;
+  margin: 0 auto;
+  border-radius: 18px;
+  overflow: hidden;
+  box-shadow: $shadow-mapa;
+  border: 1.5px solid $cor-endereco-borda;
+}
