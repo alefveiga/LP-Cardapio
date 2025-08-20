@@ -221,12 +221,12 @@ updateCartCount();
 const floatingCartBtn = document.getElementById('floating-cart-btn');
 document.getElementById('cart-btn').addEventListener('click', function() {
   document.getElementById('cart-sidebar').classList.add('open');
-  if (floatingCartBtn) floatingCartBtn.style.display = 'none';
   updateCartSidebar();
+  showFloatingCartBtn();
 });
 document.getElementById('close-cart').addEventListener('click', function() {
   document.getElementById('cart-sidebar').classList.remove('open');
-  if (floatingCartBtn) floatingCartBtn.style.display = 'flex';
+  showFloatingCartBtn();
 });
 
 // Remover item do carrinho
@@ -245,7 +245,12 @@ document.getElementById('cart-items').addEventListener('click', function(e) {
 // Exibe o botão flutuante de carrinho em todas as telas
 function showFloatingCartBtn() {
   const btn = document.getElementById('floating-cart-btn');
-  btn.style.display = 'flex';
+  const cartSidebar = document.getElementById('cart-sidebar');
+  if (cartSidebar && cartSidebar.classList.contains('open')) {
+    btn.style.display = 'none';
+  } else {
+    btn.style.display = 'flex';
+  }
 }
 window.addEventListener('resize', showFloatingCartBtn);
 window.addEventListener('DOMContentLoaded', showFloatingCartBtn);
@@ -254,8 +259,8 @@ window.addEventListener('DOMContentLoaded', showFloatingCartBtn);
 // Abrir carrinho ao clicar no botão flutuante
 document.getElementById('floating-cart-btn').addEventListener('click', function() {
   document.getElementById('cart-sidebar').classList.add('open');
-  if (floatingCartBtn) floatingCartBtn.style.display = 'none';
   updateCartSidebar();
+  showFloatingCartBtn();
 });
 
 // Adicionar pizza ao carrinho ao clicar em "Pedir agora" (mobile)
