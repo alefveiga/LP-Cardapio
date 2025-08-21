@@ -38,8 +38,3 @@ Este projeto é um site de pizzaria totalmente responsivo, desenvolvido com HTML
 
 ## Uso
 - Basta abrir o arquivo `public/index.html` em seu navegador para visualizar o site.
-
-## Contato
-- Desenvolvido por Alef Veiga
-- Email: seuemail@dominio.com
-- GitHub: [alefveiga](https://github.com/alefveiga)
